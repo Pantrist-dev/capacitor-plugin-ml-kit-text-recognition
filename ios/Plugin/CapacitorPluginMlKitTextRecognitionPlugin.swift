@@ -7,12 +7,28 @@ import Capacitor
  */
 @objc(CapacitorPluginMlKitTextRecognitionPlugin)
 public class CapacitorPluginMlKitTextRecognitionPlugin: CAPPlugin {
-    private let implementation = CapacitorPluginMlKitTextRecognition()
+    @objc func detectText(_ call: CAPPluginCall) {
+        guard var filename = call.getString("filename") else {
+            call.reject("No filename is given!")
+            return
+        }
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+        // removeFirst(7) removes the initial "file://"
+        filename.removeFirst(7)
+        guard let image = UIImage(contentsOfFile: filename) else {
+            call.reject("Unable to find image at", uri)
+            return
+        }
+
+        let textRecognizer = TextRecognizer.textRecognizer()
+
+
+        textRecognizer.process(visionImage) { result, error in
+          guard error == nil, let result = result else {
+            // Error handling
+            return
+          }
+          // Recognized text
+        }
     }
 }
