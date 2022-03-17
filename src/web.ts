@@ -1,10 +1,10 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { CapacitorPluginMlKitTextRecognitionPlugin } from './definitions';
+import type { CapacitorPluginMlKitTextRecognitionPlugin, DetectImageOptions, TextDetectionResult } from './definitions';
 
 export class CapacitorPluginMlKitTextRecognitionWeb extends WebPlugin implements CapacitorPluginMlKitTextRecognitionPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  // @ts-ignore
+  detectText(options: DetectImageOptions): Promise<TextDetectionResult> {
+    return Promise.reject("Web Plugin Not implemented");
   }
 }

@@ -7,12 +7,27 @@ import Capacitor
  */
 @objc(CapacitorPluginMlKitTextRecognitionPlugin)
 public class CapacitorPluginMlKitTextRecognitionPlugin: CAPPlugin {
-    private let implementation = CapacitorPluginMlKitTextRecognition()
+    @objc func detectText(_ call: CAPPluginCall) {
+        guard var encodedImage = call.getString("base64Image") else {
+            call.reject("No image is given!")
+            return
+        }
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+        let dataDecoded : Data = Data(base64Encoded: encodedImage, options: .ignoreUnknownCharacters)!
+        guard let image = UIImage(data: dataDecoded) else {
+            call.reject("Unable to parse image")
+            return
+        }
+
+        let textRecognizer = TextRecognizer.textRecognizer()
+
+
+        textRecognizer.process(visionImage) { result, error in
+          guard error == nil, let result = result else {
+            // Error handling
+            return
+          }
+          // Recognized text
+        }
     }
 }
