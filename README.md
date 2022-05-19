@@ -1,5 +1,7 @@
 # @pantrist/capacitor-plugin-ml-kit-text-recognition
 
+[![npm version](https://badge.fury.io/js/@pantrist%2Fcapacitor-plugin-ml-kit-text-recognition.svg)](https://badge.fury.io/js/@pantrist%2Fcapacitor-plugin-ml-kit-text-recognition)
+
 Capacitor Wrapper for TextRecognition of Gogoles ML-Kit
 
 ## Install
