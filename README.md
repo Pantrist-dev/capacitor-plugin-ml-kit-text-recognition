@@ -27,6 +27,16 @@ To do so, add the following declaration to your app's ``AndroidManifest.xml`` fi
 </application>
 ```
 
+### iOS
+
+Nothing to do for iOS
+
+
+## Supported methods
+
+| Name      | Android | iOS | Web |
+| ----------- | ----------- |-----|-----|
+| detectText   | ✅        | ✅    | ❌    |
 
 ## API
 
