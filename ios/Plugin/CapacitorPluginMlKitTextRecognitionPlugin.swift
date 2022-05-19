@@ -1,6 +1,7 @@
 import Foundation
 import Capacitor
-
+import MLKitVision
+import MLKitTextRecognition
 /**
  * Please read the Capacitor iOS Plugin Development Guide
  * here: https://capacitorjs.com/docs/plugins/ios
@@ -19,15 +20,27 @@ public class CapacitorPluginMlKitTextRecognitionPlugin: CAPPlugin {
             return
         }
 
-        let textRecognizer = TextRecognizer.textRecognizer()
-
-
+        let latinOptions = TextRecognizerOptions()
+        let textRecognizer = TextRecognizer.textRecognizer(options: latinOptions)
+        let visionImage = VisionImage(image: image)
+        
         textRecognizer.process(visionImage) { result, error in
           guard error == nil, let result = result else {
             // Error handling
+            call.reject("Error on processing image")
             return
           }
-          // Recognized text
+            
+          let linesArray = NSMutableArray()
+          
+          for textBlock: TextBlock in result.blocks {
+            linesArray.add(textBlock.text)
+          }
+            
+          call.resolve([
+            "text": result.text,
+            "lines": linesArray
+          ])
         }
     }
 }

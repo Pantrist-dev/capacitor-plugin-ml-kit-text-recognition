@@ -30,9 +30,48 @@ To do so, add the following declaration to your app's ``AndroidManifest.xml`` fi
 
 ## API
 
-<docgen-index></docgen-index>
+<docgen-index>
+
+* [`detectText(...)`](#detecttext)
+* [Interfaces](#interfaces)
+
+</docgen-index>
 
 <docgen-api>
-<!-- run docgen to generate docs from the source -->
-<!-- More info: https://github.com/ionic-team/capacitor-docgen -->
+<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### detectText(...)
+
+```typescript
+detectText(options: DetectImageOptions) => Promise<TextDetectionResult>
+```
+
+Tries to detect text from the given image
+
+| Param         | Type                                                              | Description                    |
+| ------------- | ----------------------------------------------------------------- | ------------------------------ |
+| **`options`** | <code><a href="#detectimageoptions">DetectImageOptions</a></code> | Options for the text detection |
+
+**Returns:** <code>Promise&lt;<a href="#textdetectionresult">TextDetectionResult</a>&gt;</code>
+
+--------------------
+
+
+### Interfaces
+
+
+#### TextDetectionResult
+
+| Prop        | Type                  | Description          |
+| ----------- | --------------------- | -------------------- |
+| **`text`**  | <code>string</code>   | Found text           |
+| **`lines`** | <code>string[]</code> | Parsed text by lines |
+
+
+#### DetectImageOptions
+
+| Prop              | Type                | Description                    |
+| ----------------- | ------------------- | ------------------------------ |
+| **`base64Image`** | <code>string</code> | The image to detect texts from |
+
 </docgen-api>
