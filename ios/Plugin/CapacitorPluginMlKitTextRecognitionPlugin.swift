@@ -23,23 +23,61 @@ public class CapacitorPluginMlKitTextRecognitionPlugin: CAPPlugin {
         let latinOptions = TextRecognizerOptions()
         let textRecognizer = TextRecognizer.textRecognizer(options: latinOptions)
         let visionImage = VisionImage(image: image)
-        
+
         textRecognizer.process(visionImage) { result, error in
           guard error == nil, let result = result else {
             // Error handling
             call.reject("Error on processing image")
             return
           }
-            
-          let linesArray = NSMutableArray()
-          
+
+          let textBlocks = NSMutableArray()
           for textBlock: TextBlock in result.blocks {
-            linesArray.add(textBlock.text)
+            let lines = NSMutableArray()
+            for line: TextLine in textBlock.lines {
+              let elements = NSMutableArray()
+              for element: TextElement in line.elements {
+                elements.add([
+                  "text": element.text,
+                  "boundingBox": [
+                    "left": element.frame.minX,
+                    "top": element.frame.maxY,
+                    "right": element.frame.maxX,
+                    "bottom": element.frame.minY,
+                  ],
+                  "recognizedLanguage": element.recognizedLanguages.first?.languageCode ?? ""
+                ])
+              }
+
+              lines.add([
+                "text": line.text,
+                "boundingBox": [
+                    "left": line.frame.minX,
+                    "top": line.frame.maxY,
+                    "right": line.frame.maxX,
+                    "bottom": line.frame.minY,
+                ],
+                "recognizedLanguage": line.recognizedLanguages.first?.languageCode ?? "",
+                "elements": elements
+              ])
+            }
+
+            textBlocks.add([
+               "text": textBlock.text,
+               "boundingBox": [
+                 "left": textBlock.frame.minX,
+                 "top": textBlock.frame.maxY,
+                 "right": textBlock.frame.maxX,
+                 "bottom": textBlock.frame.minY,
+               ],
+               "recognizedLanguage": textBlock.recognizedLanguages.first?.languageCode ?? "",
+               "lines": lines
+             ])
           }
-            
+
           call.resolve([
             "text": result.text,
-            "lines": linesArray
+            "blocks": textBlocks
           ])
         }
     }
