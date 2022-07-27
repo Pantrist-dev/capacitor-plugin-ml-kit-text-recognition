@@ -22,5 +22,28 @@ export interface TextDetectionResult {
   /**
    * Parsed text by lines
    */
-  lines: string[]
+  blocks: Block[]
+}
+
+export interface Block extends TextBase {
+  lines: Line[];
+}
+
+export interface Line extends TextBase {
+  elements: Element[];
+}
+
+export interface Element extends TextBase {}
+
+export interface TextBase {
+  text: string;
+  boundingBox: BoundingBox;
+  recognizedLanguage: string;
+}
+
+export interface BoundingBox {
+  left: number;
+  top: number;
+  right: number;
+  bottom: number;
 }
