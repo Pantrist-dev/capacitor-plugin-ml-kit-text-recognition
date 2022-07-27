@@ -74,10 +74,27 @@ Tries to detect text from the given image
 
 #### TextDetectionResult
 
-| Prop        | Type                  | Description          |
-| ----------- | --------------------- | -------------------- |
-| **`text`**  | <code>string</code>   | Found text           |
-| **`lines`** | <code>string[]</code> | Parsed text by lines |
+| Prop         | Type                 | Description          |
+| ------------ | -------------------- | -------------------- |
+| **`text`**   | <code>string</code>  | Found text           |
+| **`blocks`** | <code>Block[]</code> | Parsed text by lines |
+
+
+#### Block
+
+| Prop        | Type                |
+| ----------- | ------------------- |
+| **`lines`** | <code>Line[]</code> |
+
+
+#### Line
+
+| Prop           | Type                   |
+| -------------- | ---------------------- |
+| **`elements`** | <code>Element[]</code> |
+
+
+#### Element
 
 
 #### DetectImageOptions
