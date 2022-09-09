@@ -27,6 +27,10 @@ class CapacitorPluginMlKitTextRecognition : Plugin() {
         try {
             val decodedString: ByteArray = Base64.decode(encodedImage, Base64.DEFAULT);
             val decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.size)
+            if (decodedByte == null) {
+                call.reject("Decoded image is null")
+                return
+            }
             image = InputImage.fromBitmap(decodedByte, 0);
         } catch (e: IOException) {
             call.reject("Unable to parse image")
