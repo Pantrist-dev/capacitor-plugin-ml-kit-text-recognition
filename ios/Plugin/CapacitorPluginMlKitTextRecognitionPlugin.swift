@@ -9,7 +9,7 @@ import MLKitTextRecognition
 @objc(CapacitorPluginMlKitTextRecognitionPlugin)
 public class CapacitorPluginMlKitTextRecognitionPlugin: CAPPlugin {
     @objc func detectText(_ call: CAPPluginCall) {
-        guard var encodedImage = call.getString("base64Image") else {
+        guard let encodedImage = call.getString("base64Image") else {
             call.reject("No image is given!")
             return
         }
