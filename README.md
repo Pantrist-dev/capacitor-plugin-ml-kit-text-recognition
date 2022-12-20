@@ -100,8 +100,9 @@ Tries to detect text from the given image
 
 #### DetectImageOptions
 
-| Prop              | Type                | Description                    |
-| ----------------- | ------------------- | ------------------------------ |
-| **`base64Image`** | <code>string</code> | The image to detect texts from |
+| Prop              | Type                | Description                                                                                      |
+| ----------------- | ------------------- | ------------------------------------------------------------------------------------------------ |
+| **`base64Image`** | <code>string</code> | The image to detect texts from                                                                   |
+| **`rotation`**    | <code>number</code> | The image's counter-clockwise orientation degrees. Only 0, 90, 180, 270 are supported. Default 0 |
 
 </docgen-api>

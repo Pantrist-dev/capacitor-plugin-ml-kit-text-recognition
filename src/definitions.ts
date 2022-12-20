@@ -12,6 +12,10 @@ export interface DetectImageOptions {
    * The image to detect texts from
    */
   base64Image: string;
+  /**
+   * The image's counter-clockwise orientation degrees. Only 0, 90, 180, 270 are supported. Default 0
+   */
+  rotation?: number;
 }
 
 export interface TextDetectionResult {
