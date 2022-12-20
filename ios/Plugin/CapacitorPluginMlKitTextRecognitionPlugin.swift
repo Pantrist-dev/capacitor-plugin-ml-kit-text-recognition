@@ -13,6 +13,7 @@ public class CapacitorPluginMlKitTextRecognitionPlugin: CAPPlugin {
             call.reject("No image is given!")
             return
         }
+        let rotation = call.getInt("rotation") ?? 0
 
         let dataDecoded : Data = Data(base64Encoded: encodedImage, options: .ignoreUnknownCharacters)!
         guard let image = UIImage(data: dataDecoded) else {
@@ -23,6 +24,7 @@ public class CapacitorPluginMlKitTextRecognitionPlugin: CAPPlugin {
         let latinOptions = TextRecognizerOptions()
         let textRecognizer = TextRecognizer.textRecognizer(options: latinOptions)
         let visionImage = VisionImage(image: image)
+        visionImage.orientation = visionImageOrientation(rotation: rotation)
 
         textRecognizer.process(visionImage) { result, error in
           guard error == nil, let result = result else {
@@ -79,6 +81,21 @@ public class CapacitorPluginMlKitTextRecognitionPlugin: CAPPlugin {
             "text": result.text,
             "blocks": textBlocks
           ])
+        }
+    }
+
+    public func visionImageOrientation(rotation: Int) -> UIImage.Orientation {
+        switch rotation {
+        case 0:
+            return .up
+        case 90:
+            return .left
+        case 180:
+            return .down
+        case 270:
+            return .right
+        default:
+            return .up
         }
     }
 }

@@ -22,6 +22,7 @@ class CapacitorPluginMlKitTextRecognition : Plugin() {
             call.reject("No image is given!")
             return
         }
+        val rotation = call.getInt("rotation") ?: 0
 
         val image: InputImage
         try {
@@ -31,7 +32,7 @@ class CapacitorPluginMlKitTextRecognition : Plugin() {
                 call.reject("Decoded image is null")
                 return
             }
-            image = InputImage.fromBitmap(decodedByte, 0);
+            image = InputImage.fromBitmap(decodedByte, rotation)
         } catch (e: IOException) {
             call.reject("Unable to parse image")
             return
