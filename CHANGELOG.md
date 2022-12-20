@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/compare/v4.0.1...v4.1.0) (2022-12-20)
+
+
+### Features
+
+* add rotation attribute to DetectImageOptions ([73a09c1](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/commit/73a09c1cb89ca45aa7b014ec0cf6e477aa846842))
+* **android:** make version of com.google.android.gms:play-services-mlkit-text-recognition configurable ([c1936de](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/commit/c1936de5c4efeaae96bccfcc7daeca0ed0487977))
+* **android:** update mlkitTextRecognitionVersion to 18.0.2 ([94ebf35](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/commit/94ebf35ab3aa6887d3c4563e4ef0ae83bda17cc7))
+* **ios:** upgrade MLKit to version 3.2.0 ([b047421](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/commit/b047421131c5ef7b4de828c7cd2c840a1b02c7a9))
+
+
+### Bug Fixes
+
+* **ios:** resolve small warning for ios ([02daf9c](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/commit/02daf9c412481690ec6023481ffa53088ee1fa48))
+
 ## 4.0.1 (2022-09-09)
 
 ### Bug Fixes
