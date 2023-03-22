@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.1.1](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/compare/v4.1.0...v4.1.1) (2023-03-22)
+
+
+### Bug Fixes
+
+* **ios:** set explicit ml-kit version in podspec file [#8](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/issues/8) ([dda78e9](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/commit/dda78e9d6c6d4a8c3697cc2b7d9b45fd8c6555ea))
+
 ## [4.1.0](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/compare/v4.0.1...v4.1.0) (2022-12-20)
 
 
