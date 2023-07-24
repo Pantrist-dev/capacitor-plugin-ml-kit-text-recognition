@@ -61,6 +61,7 @@ class CapacitorPluginMlKitTextRecognition : Plugin() {
                         line.elements.forEach { element ->
                             val elementObject = JSObject()
                             elementObject.put("text", element.text)
+                            elementObject.put("confidence", element.confidence)
                             elementObject.put("boundingBox", parseRectToJsObject(element.boundingBox))
                             elementObject.put("recognizedLanguage", line.recognizedLanguage)
                             elementArray.put(elementObject)
