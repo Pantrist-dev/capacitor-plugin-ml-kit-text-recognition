@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.0.1](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/compare/v5.0.0...v5.0.1) (2023-10-20)
+
+
+### Bug Fixes
+
+* **kotlin-version:** adds explicit kotlin version ([28dd0cf](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/commit/28dd0cfe3d6dae6b25bcddeefb5a2db2213220ce))
+
 ## [5.0.0](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/compare/v4.1.1...v5.0.0) (2023-05-03)
 
 
