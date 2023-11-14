@@ -1,6 +1,6 @@
 {
   "name": "@pantrist/capacitor-plugin-ml-kit-text-recognition",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "Capacitor Wrapper for TextRecognition of Gogoles ML-Kit",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
