@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/compare/v5.1.1...v6.0.0) (2024-04-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **cap-6:** update to capacitor 6
+
+### Features
+
+* **cap-6:** update to capacitor 6 ([8cf6c78](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/commit/8cf6c784192edb7e9bd3f7e53823f5259a992cc2))
+
 ### [5.1.1](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/compare/v5.1.0...v5.1.1) (2023-11-14)
 
 
