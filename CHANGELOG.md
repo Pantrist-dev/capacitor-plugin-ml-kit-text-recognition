@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.1.0](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/compare/v6.0.0...v6.1.0) (2024-06-10)
+
+
+### Features
+
+* **ios:** update `GoogleMLKit` to 5.0.0 ([134d15f](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/commit/134d15fe522955057a6e6da96e6aebe9ad3f526e))
+
 ## [6.0.0](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/compare/v5.1.1...v6.0.0) (2024-04-29)
 
 
