@@ -30,14 +30,15 @@ export interface TextDetectionResult {
 }
 
 export interface Block extends TextBase {
+  cornerPoints: CornersPoints | null;
   lines: Line[];
 }
 
-export interface Line extends TextBase {
+export interface Line extends TextBase, TextAdditional {
   elements: Element[];
 }
 
-export interface Element extends TextBase {}
+export interface Element extends TextBase, TextAdditional {}
 
 export interface TextBase {
   text: string;
@@ -45,9 +46,27 @@ export interface TextBase {
   recognizedLanguage: string;
 }
 
+export interface TextAdditional {
+  cornerPoints: CornersPoints | null;
+  confidence: number;
+  angle: number;
+}
+
 export interface BoundingBox {
   left: number;
   top: number;
   right: number;
   bottom: number;
+}
+
+export interface CornersPoints {
+  topLeft: Point;
+  topRight: Point;
+  bottomRight: Point;
+  bottomLeft: Point;
+}
+
+export interface Point {
+  x : number;
+  y : number;
 }
