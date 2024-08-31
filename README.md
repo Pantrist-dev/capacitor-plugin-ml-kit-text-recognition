@@ -83,28 +83,9 @@ Tries to detect text from the given image
 
 #### Block
 
-| Prop               | Type                                                            |
-| ------------------ | --------------------------------------------------------------- |
-| **`cornerPoints`** | <code><a href="#cornerspoints">CornersPoints</a> \| null</code> |
-| **`lines`**        | <code>Line[]</code>                                             |
-
-
-#### CornersPoints
-
-| Prop              | Type                                    |
-| ----------------- | --------------------------------------- |
-| **`topLeft`**     | <code><a href="#point">Point</a></code> |
-| **`topRight`**    | <code><a href="#point">Point</a></code> |
-| **`bottomRight`** | <code><a href="#point">Point</a></code> |
-| **`bottomLeft`**  | <code><a href="#point">Point</a></code> |
-
-
-#### Point
-
-| Prop    | Type                |
-| ------- | ------------------- |
-| **`x`** | <code>number</code> |
-| **`y`** | <code>number</code> |
+| Prop        | Type                |
+| ----------- | ------------------- |
+| **`lines`** | <code>Line[]</code> |
 
 
 #### Line

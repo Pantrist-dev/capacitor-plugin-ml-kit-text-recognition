@@ -8,6 +8,31 @@ import MLKitTextRecognition
  */
 @objc(CapacitorPluginMlKitTextRecognitionPlugin)
 public class CapacitorPluginMlKitTextRecognitionPlugin: CAPPlugin {
+    func parseCornerPointsToJsObject(cornerPoints: [NSValue]) -> Dictionary<String, Any> {
+//        let res = NSMutableArray();
+//        res.add(
+            return [
+            "topLeft": [
+                "x": cornerPoints[0].cgPointValue.x,
+                "y": cornerPoints[0].cgPointValue.y,
+            ],
+            "topRight": [
+                "x": cornerPoints[1].cgPointValue.x,
+                "y": cornerPoints[1].cgPointValue.y,
+            ],
+            "bottomRight": [
+                "x": cornerPoints[2].cgPointValue.x,
+                "y": cornerPoints[2].cgPointValue.y,
+            ],
+            "bottomLeft": [
+                "x": cornerPoints[0].cgPointValue.x,
+                "y": cornerPoints[0].cgPointValue.y,
+            ]
+            ];
+//        ]);
+//        return res;
+    }
+    
     @objc func detectText(_ call: CAPPluginCall) {
         guard let encodedImage = call.getString("base64Image") else {
             call.reject("No image is given!")
@@ -47,7 +72,8 @@ public class CapacitorPluginMlKitTextRecognitionPlugin: CAPPlugin {
                     "right": element.frame.maxX,
                     "bottom": element.frame.minY,
                   ],
-                  "recognizedLanguage": element.recognizedLanguages.first?.languageCode ?? ""
+                  "recognizedLanguage": element.recognizedLanguages.first?.languageCode ?? "",
+                  "cornerPoints": self.parseCornerPointsToJsObject(cornerPoints: element.cornerPoints)
                 ])
               }
 
@@ -60,6 +86,7 @@ public class CapacitorPluginMlKitTextRecognitionPlugin: CAPPlugin {
                     "bottom": line.frame.minY,
                 ],
                 "recognizedLanguage": line.recognizedLanguages.first?.languageCode ?? "",
+                "cornerPoints": self.parseCornerPointsToJsObject(cornerPoints: line.cornerPoints),
                 "elements": elements
               ])
             }
@@ -73,6 +100,7 @@ public class CapacitorPluginMlKitTextRecognitionPlugin: CAPPlugin {
                  "bottom": textBlock.frame.minY,
                ],
                "recognizedLanguage": textBlock.recognizedLanguages.first?.languageCode ?? "",
+               "cornerPoints": self.parseCornerPointsToJsObject(cornerPoints: textBlock.cornerPoints),
                "lines": lines
              ])
           }
