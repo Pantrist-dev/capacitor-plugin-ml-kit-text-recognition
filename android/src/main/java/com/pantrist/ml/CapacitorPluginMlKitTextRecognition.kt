@@ -59,8 +59,6 @@ class CapacitorPluginMlKitTextRecognition : Plugin() {
             lineObject.put("boundingBox", parseRectToJsObject(line.boundingBox))
             lineObject.put("recognizedLanguage", line.recognizedLanguage)
             lineObject.put("cornerPoints", parseCornerPointsToJsObject(line.cornerPoints))
-            lineObject.put("confidence", line.confidence);
-            lineObject.put("angle", line.angle);
 
             val elementArray = JSArray()
             line.elements.forEach { element ->
@@ -69,8 +67,6 @@ class CapacitorPluginMlKitTextRecognition : Plugin() {
               elementObject.put("boundingBox", parseRectToJsObject(element.boundingBox))
               elementObject.put("recognizedLanguage", line.recognizedLanguage)
               elementObject.put("cornerPoints", parseCornerPointsToJsObject(element.cornerPoints))
-              elementObject.put("confidence", element.confidence);
-              elementObject.put("angle", element.angle);
               elementArray.put(elementObject)
             }
             lineObject.put("elements", elementArray)
