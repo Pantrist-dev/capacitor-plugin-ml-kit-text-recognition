@@ -3,7 +3,7 @@ ext {
     androidxAppCompatVersion = project.hasProperty('androidxAppCompatVersion') ? rootProject.ext.androidxAppCompatVersion : '1.6.1'
     androidxJunitVersion = project.hasProperty('androidxJunitVersion') ? rootProject.ext.androidxJunitVersion : '1.1.5'
     androidxEspressoCoreVersion = project.hasProperty('androidxEspressoCoreVersion') ? rootProject.ext.androidxEspressoCoreVersion : '3.5.1'
-    mlkitTextRecognitionVersion = project.hasProperty('mlkitTextRecognitionVersion') ? rootProject.ext.mlkitTextRecognitionVersion : '18.0.2'
+    mlkitTextRecognitionVersion = project.hasProperty('mlkitTextRecognitionVersion') ? rootProject.ext.mlkitTextRecognitionVersion : '19.0.1'
 }
 
 buildscript {

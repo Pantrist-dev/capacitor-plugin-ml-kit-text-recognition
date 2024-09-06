@@ -43,6 +43,7 @@ export interface TextBase {
   text: string;
   boundingBox: BoundingBox;
   recognizedLanguage: string;
+  cornerPoints: CornersPoints | null;
 }
 
 export interface BoundingBox {
@@ -50,4 +51,16 @@ export interface BoundingBox {
   top: number;
   right: number;
   bottom: number;
+}
+
+export interface CornersPoints {
+  topLeft: Point;
+  topRight: Point;
+  bottomRight: Point;
+  bottomLeft: Point;
+}
+
+export interface Point {
+  x : number;
+  y : number;
 }
