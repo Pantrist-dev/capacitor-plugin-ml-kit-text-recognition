@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.2.0](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/compare/v6.1.0...v6.2.0) (2024-09-06)
+
+
+### Features
+
+* Added cornerPoints to Block, Line, Element in TextDetectionResult ([#12](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/issues/12)) ([76e35fd](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/commit/76e35fd1d18316fd20e9da80a6a1e70132276d81))
+
 ## [6.1.0](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/compare/v6.0.0...v6.1.0) (2024-06-10)
 
 
