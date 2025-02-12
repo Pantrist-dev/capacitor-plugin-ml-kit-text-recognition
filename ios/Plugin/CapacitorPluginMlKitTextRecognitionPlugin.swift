@@ -7,7 +7,12 @@ import MLKitTextRecognition
  * here: https://capacitorjs.com/docs/plugins/ios
  */
 @objc(CapacitorPluginMlKitTextRecognitionPlugin)
-public class CapacitorPluginMlKitTextRecognitionPlugin: CAPPlugin {
+public class CapacitorPluginMlKitTextRecognitionPlugin: CAPPlugin, CAPBridgedPlugin {
+    public let identifier = "CapacitorPluginMlKitTextRecognitionPlugin" 
+    public let jsName = "CapacitorPluginMlKitTextRecognition" 
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "detectText", returnType: CAPPluginReturnPromise),
+    ] 
     func parseCornerPointsToJsObject(cornerPoints: [NSValue]) -> Dictionary<String, Any> {
 //        let res = NSMutableArray();
 //        res.add(

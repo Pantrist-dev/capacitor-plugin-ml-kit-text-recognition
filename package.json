@@ -41,6 +41,7 @@
     "swiftlint": "node-swiftlint",
     "docgen": "docgen --api CapacitorPluginMlKitTextRecognitionPlugin --output-readme README.md --output-json dist/docs.json",
     "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
+    "ios:spm:install": "cd ios && swift package resolve && cd ..",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build",
