@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.0.0](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/compare/v6.2.1...v8.0.0) (2026-02-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* **cap-8:** migrate to capacitor 8
+* **cap-7:** migrate to capacitor 7
+
+### Features
+
+* **cap-7:** migrate to capacitor 7 ([7a11983](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/commit/7a119836f554d17eb716b142d781afdaee5fe647))
+* **cap-8:** migrate to capacitor 8 ([05e408c](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/commit/05e408c84c8f2ecca66031d3fa25ced6f3700146))
+* **spm:** migrate to Swift Package Manager ([da0cbee](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/commit/da0cbee20cb10fd4f173fbcfb2c4225b8126d409))
+
 ## [7.0.0](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/compare/v6.2.1...v7.0.0) (2025-03-20)
 
 
