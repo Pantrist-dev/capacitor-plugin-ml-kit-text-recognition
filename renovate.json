@@ -2,5 +2,19 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "description": "Do not open major-version PRs for typescript (Angular 22 requires typescript >=6.0 <6.1; TS 7 will not compile until Angular raises this range)",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["typescript"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
+      "description": "Do not auto-update native Android Gradle dependencies at all (AGP, Gradle wrapper itself, AndroidX, Kotlin, Firebase gradle plugins), including majors. These are scaffolded/managed by Capacitor and only get bumped manually to stay compliant (see the reverted Gradle 9 migration)",
+      "matchManagers": ["gradle", "gradle-wrapper"],
+      "enabled": false
+    }
   ]
 }
