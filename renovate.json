@@ -15,6 +15,13 @@
       "description": "Do not auto-update native Android Gradle dependencies at all (AGP, Gradle wrapper itself, AndroidX, Kotlin, Firebase gradle plugins), including majors. These are scaffolded/managed by Capacitor and only get bumped manually to stay compliant (see the reverted Gradle 9 migration)",
       "matchManagers": ["gradle", "gradle-wrapper"],
       "enabled": false
+    },
+    {
+      "description": "Do not open major-version PRs for eslint until @ionic/eslint-config supports flat config / ESLint 9+ (it still ships eslintrc-based config and pins typescript-eslint ^5, which only supports eslint <=8). Re-enable once @ionic/eslint-config is updated or dropped.",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["eslint"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
     }
   ]
 }
