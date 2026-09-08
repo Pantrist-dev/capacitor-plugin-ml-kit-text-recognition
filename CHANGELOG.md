@@ -1,6 +1,14 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [8.1.0](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/compare/v8.0.0...v8.1.0) (2026-09-08)
+
+
+### Features
+
+* **ios:** update GoogleMLKit/TextRecognition to 8.0.0 ([3e25e32](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/commit/3e25e329aee070f170ddb1d16819af3db34b5bb6))
+* **ios:** update GoogleMLKit/TextRecognition to 9.0.0 ([8f2645a](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/commit/8f2645a7f02a202a1c76d7aaa3d5f6f12fb189ee))
 
 ## [8.0.0](https://github.com/Pantrist-dev/capacitor-plugin-ml-kit-text-recognition/compare/v6.2.1...v8.0.0) (2026-02-05)
 
